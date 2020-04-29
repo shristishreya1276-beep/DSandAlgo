@@ -1,0 +1,33 @@
+1. Binary search algorithm: Binary search is like we first define a new variable which is half the way, now try to compare if the number is smaller or greater or equal to the middle index number and if it's bigger we remove the first half and only search in the above part and so on. Execution time is O(log(n))
+arr = [1,2,3,4]
+x = int(input())
+arr.sort()
+left = 0
+right = len(arr)-1
+def BS(arr, left, right, x):
+    y = (left+right)//2
+    if x in arr:
+        if int(arr[y]) == x:
+            return y 
+        elif int(arr[y]) < x:
+            return BS(arr, y+1, right, x)
+        elif int(arr[y]) > x:
+            return BS(arr, left, y-1 , x)
+    else:
+        return -1
+result = BS(arr, left, right, x)
+if result != -1:
+    print("Index is: " + str(result))
+else:
+    print("Doesn't exist")
+    
+2. Brute force Algorithm: Brute force is like we are trying with every item and checking if it's meet our condition or not. No extra algorithm or trick is applied to make the code effiecient. Execution time in 0(n).
+arr = [1,2,3,4]
+x = int(input())
+arr.sort()
+if x in arr:
+    print(arr.index(x))
+else:
+    print("Doesn't exist")
+    
+3. 
