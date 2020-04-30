@@ -30,4 +30,31 @@ if x in arr:
 else:
     print("Doesn't exist")
     
-3. 
+3. Stack and Queque: Stack can be implemented as arrays or linked list  and queque can be implemented with circular array and doubly linked list. So the basic theory behind stack is that last element inserted will be the first element that will come out assume of it as the stack of utensils in a function, where the last utensil that is kept is the first one to be taken out and queque operate as fist in first out now think of it as queque for taking money out of ATM, the first person standing will be the first one to take money out and go. To implement stack and queque in python we will use deque from collection module as it takes less time compared to dealing with array. So, there are two basic functions push and pop, pup goes by append in python where append(whatever_we_want_to_add) is the format and pop() gives the last element in case of stack and leftpop() is used in queque.
+
+The official terminologies used for stack are pop() for removing and push() for adding elements. And for queque it is enqueuqe() and dequeuqe() for adding and removing elements. 
+
+Stack implementation:
+from collections import deque
+stack = deque()
+stack.append(whatever_we_want_to_add)
+stack.pop()
+
+Queque implementation:
+from collections import deque
+queque = deque()
+queque.append(whatever_we_want_to_add)
+queque.popleft()
+
+Coming to time complexity:
+For checking if stack/queque empty: O(1)
+For checking the size of stack/queque: 0(1)
+For adding an element at last(append/push): 0(1)
+For poping out an element: 0(1)
+
+I guess, the constant time compelexities that make stack and queque useful. 
+In queque, order matters and the thing that has been waiting for longest gets served first. Common examples of stacks and queques that we include in our everyday life involves undo and redo. Undo means removing our recent actions and storing it in form of stack and redo means accessing the stack which goes in the fashion last in first out. 
+
+4. Sorting Algorithms
+Why is sorting important? Searching through a general array takes 0(n) time complexity for execution however for a sorted array it takes 0(log(n)) time which can be considered as constant time 0(1) for higher value of n visualise it through a log graph.
+i). Bubble Sort
