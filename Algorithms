@@ -57,4 +57,4 @@ In queque, order matters and the thing that has been waiting for longest gets se
 
 4. Sorting Algorithms
 Why is sorting important? Searching through a general array takes 0(n) time complexity for execution however for a sorted array it takes 0(log(n)) time which can be considered as constant time 0(1) for higher value of n visualise it through a log graph.
-i). Bubble Sort
+i). Bubble Sort -- It is simple but very inefficient. The process starts with approaching from one side and then comparing the next 
