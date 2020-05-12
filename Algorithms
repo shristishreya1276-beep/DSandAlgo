@@ -69,8 +69,20 @@ def bubblesort(a):
     return a 
 print(bubblesort(a))
 
-2) Selection sort: As the name suggests, we try to select the smallest element and then swap it with elements in the sorted section. 
+2) Insertion sort: As the name suggests, we try to select the smallest element and then swap it with elements in the sorted section. 
 
 Code implementation in python:
-
+n = int(input())
+a = list(map(int, input().split()))
+for i in a:
+    j = a.index(i)
+    while j > 0:
+        if a[j-1] > a[j]:
+            a[j-1],a[j] = a[j],a[j-1]
+        else:
+            break
+        j -= 1
+    print(*a)
+    
+3) Quick sort: 
 
