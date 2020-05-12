@@ -57,4 +57,20 @@ In queque, order matters and the thing that has been waiting for longest gets se
 
 4. Sorting Algorithms
 Why is sorting important? Searching through a general array takes 0(n) time complexity for execution however for a sorted array it takes 0(log(n)) time which can be considered as constant time 0(1) for higher value of n visualise it through a log graph.
-i). Bubble Sort -- It is simple but very inefficient. The process starts with approaching from one side and then comparing the next 
+1) Bubble sort: The most ineffecient sorting algorithm. We go by checking each element and its neighbours and if it's smaller we simply swap the positions. 
+Code for bubble sort implementation:
+
+a = list(map(int, input().split()))
+def bubblesort(a):
+    for i in range(len(a)):
+        for j in range(0,len(a)-1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1],a[j]
+    return a 
+print(bubblesort(a))
+
+2) Selection sort: As the name suggests, we try to select the smallest element and then swap it with elements in the sorted section. 
+
+Code implementation in python:
+
+
